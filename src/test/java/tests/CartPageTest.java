@@ -1,5 +1,7 @@
 package tests;
 
+import org.openqa.selenium.By;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -31,7 +33,14 @@ public class CartPageTest extends SauceDemoBaseClass {
 	public void carttocheckout() throws InterruptedException {
 		cartPageObj.goinsidecart();
 		cartPageObj.checkout();
-		Thread.sleep(5000);
+		Thread.sleep(2000);
+	}
+	
+	@AfterMethod
+	public void close() throws InterruptedException{
+		driver.findElement(By.xpath("//button[@id='react-burger-menu-btn']")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//a[@id='logout_sidebar_link']")).click();	
 	}
 
 }
