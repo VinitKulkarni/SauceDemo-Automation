@@ -1,0 +1,43 @@
+# Eclipse
+.classpath
+.project
+.settings/
+.factorypath
+bin/
+
+# Maven
+target/
+
+# Java
+*.class
+
+# TestNG
+test-output/
+
+# Reports
+ExtentReports/
+allure-results/
+allure-report/
+reports/
+
+# Screenshots
+screenshots/
+
+# Logs
+logs/
+*.log
+
+# Temporary files
+*.tmp
+*.bak
+.DS_Store
+Thumbs.db
+
+# Ignore login configuration file
+src/test/resources/login_config.properties
+
+# Sensitive files
+.env
+.env.*
+secrets.properties
+credentials.properties
