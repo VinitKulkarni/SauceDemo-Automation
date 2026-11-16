@@ -26,8 +26,9 @@ public class LoginPageTest extends SauceDemoBaseClass{
 	}
 	
 	@AfterMethod
-	public void close() {
+	public void close() throws InterruptedException{
 		driver.findElement(By.xpath("//button[@id='react-burger-menu-btn']")).click();
+		Thread.sleep(2000);
 		driver.findElement(By.xpath("//a[@id='logout_sidebar_link']")).click();
 	}
 
