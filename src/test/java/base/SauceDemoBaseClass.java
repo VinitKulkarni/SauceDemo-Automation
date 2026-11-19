@@ -35,6 +35,8 @@ public class SauceDemoBaseClass {
         driver = new ChromeDriver(options);
         driver.manage().window().maximize();
 		driver.get("https://www.saucedemo.com/");
+		
+		//this line of code is added to just to test github push
 	}
 	
 	@AfterClass
